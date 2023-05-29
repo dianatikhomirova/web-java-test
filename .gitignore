@@ -25,3 +25,6 @@ replay_pid*
 
 # Custom
 .idea
+**/resources
+target
+**/.DS_Store

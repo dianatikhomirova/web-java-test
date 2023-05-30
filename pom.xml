@@ -15,7 +15,7 @@
         <junit.jupiter.version>5.9.3</junit.jupiter.version>
         <selenium.version>4.9.1</selenium.version>
         <slf4j.version>2.0.7</slf4j.version>
-        <webdrivermanager.version>5.0.3</webdrivermanager.version>
+        <webdrivermanager.version>5.3.3</webdrivermanager.version>
     </properties>
 
     <dependencies>
@@ -29,6 +29,12 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

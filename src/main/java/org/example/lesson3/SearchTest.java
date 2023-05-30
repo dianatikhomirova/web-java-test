@@ -1,21 +1,20 @@
 package org.example.lesson3;
 
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SearchTest {
     private static WebDriver driver;
 
     @BeforeAll
     public static void setUp() {
-        driver = new ChromeDriver();
-
+        driver = WebDriverManager.chromedriver().create();
     }
 
     @AfterAll

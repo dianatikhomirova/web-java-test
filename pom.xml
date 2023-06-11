@@ -20,6 +20,8 @@
         <maven.site.plugin.version>3.12.1</maven.site.plugin.version>
         <maven.surefire-report.plugin.version>3.1.0</maven.surefire-report.plugin.version>
         <maven.project-info-reports.plugin.version>3.4.3</maven.project-info-reports.plugin.version>
+        <allure.version>2.22.1</allure.version>
+        <allure-maven.version>2.12.0</allure-maven.version>
     </properties>
 
     <dependencies>
@@ -53,9 +55,19 @@
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit5</artifactId>
+            <version>${allure.version} </version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-java-commons</artifactId>
+            <version>${allure.version} </version>
+        </dependency>
     </dependencies>
 
-    <reporting>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -77,6 +89,14 @@
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>${maven.project-info-reports.plugin.version}</version>
             </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure-maven.version}</version>
+                <configuration>
+                    <buildDirectory>${project.build.directory}</buildDirectory>
+                </configuration>
+            </plugin>
         </plugins>
-    </reporting>
+    </build>
 </project>
